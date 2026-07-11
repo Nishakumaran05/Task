@@ -149,10 +149,12 @@ console.log("")
 
 //simple menu
 
-var num=4;
+var prompt = require("prompt-sync")()
+var num = Number(prompt("Enter the number"))
 do{
     if(num!==0){
         console.log("Continue...")
     }
+    var num1=Number()
 }while(num!=0)
 console.log("Program Ended")
