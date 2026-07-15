@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .redtxt {
+        color: red;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+
+    <!-- random number -->
+
+    <div class="random">
+        <h1 id="values">1</h1>
+        <button onclick="random()">Click</button>
+        <button onclick="resetbtn()">Reset</button>
+    </div>
+
+</body>
+
+<script>
+
+    debugger
+    var value = document.getElementById("values")
+    var count = 0
+    function random() {
+        if (count >= 10) {
+            alert("You Reached the Limit... Please Reset")
+            return
+        }
+
+        value.textContent = Math.floor((Math.random() * 100) + 1)
+        count++
+    }
+
+    function resetbtn() {
+        value.innerText = 1
+        count = 0
+        alert("Reset Successfully !! Now you can start generate")
+    }
+
+</script>
+
+</html>
