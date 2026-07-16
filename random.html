@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    .redtxt {
+    #limit {
         color: red;
         font-size: 14px;
     }
@@ -19,6 +19,7 @@
 
     <div class="random">
         <h1 id="values">1</h1>
+        <span id="limit"></span> <br> <br>
         <button onclick="random()">Click</button>
         <button onclick="resetbtn()">Reset</button>
     </div>
@@ -29,10 +30,11 @@
 
     debugger
     var value = document.getElementById("values")
+    var limittxt = document.getElementById("limit")
     var count = 0
     function random() {
-        if (count >= 10) {
-            alert("You Reached the Limit... Please Reset")
+        if (count >= 5) {
+            limittxt.textContent = "You have reached the max limit.. reset and try again"
             return
         }
 
@@ -43,6 +45,7 @@
     function resetbtn() {
         value.innerText = 1
         count = 0
+        limittxt.innerText = " "
         alert("Reset Successfully !! Now you can start generate")
     }
 
